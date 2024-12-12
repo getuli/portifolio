@@ -1,0 +1,160 @@
+/* Aplicação global para todos os h1 */
+.apresentacao h1, .container1 h1{
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 10px;
+    background: linear-gradient(90deg, #ff006e, #8338ec, #3a86ff);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: brilho-h1 3s infinite; /* Efeito de brilho */
+}
+
+/* Ajustes específicos para seções e elementos */
+.section {
+    background-color: black;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.apresentacao {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.apresentacao h2, .apresentacao p {
+    margin-top: 20px;
+    color: #eee;
+}
+
+.apresentacao p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.barra {
+    display: block;
+    height: 230px;
+    width: 15px;
+    margin: 20px 0;
+    background: linear-gradient(180deg, #ff006e, #8338ec, #3a86ff);
+    background-size: 200%;
+    animation: brilho 3s infinite;
+}
+
+.apresentacao2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.apresentacao2 img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container1 {
+    max-width: 600px;
+    text-align: flex-start;
+    color: #eee;
+}
+.container1 h1{
+    margin-left: -10px;
+    margin-bottom: 40px;
+    margin-top: -10px;
+}
+
+.container1 p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+/* Efeito de brilho */
+@keyframes brilho-h1 {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 1024px) {
+    .barra {
+        height: 250px;
+    }
+
+    .apresentacao h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        animation: brilho-h1 3s infinite; /* Mantém o brilho */
+    }
+    
+    .barra {
+        display: none;
+    }
+
+    .container1 p {
+        font-size: 0.9rem;
+        max-width: 90%;
+    }
+
+    .apresentacao p {
+        font-size: 0.85rem;
+    }
+
+    .apresentacao2 {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        animation: brilho-h1 3s infinite; /* Mantém o brilho */
+    }
+    
+    .container1 p {
+        font-size: 0.8rem;
+        max-width: 100%;
+    }
+    
+    .apresentacao p {
+        font-size: 0.9rem;
+        margin: 10px auto;
+    }
+
+    .apresentacao2 img {
+        max-width: 200px;
+    }
+}

@@ -1,0 +1,155 @@
+
+.habilidade {
+    display: flex;
+    min-height: 90vh;
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10vh;
+    background-color: black;
+}
+
+@media (max-width: 768px) {
+    .habilidade {
+        padding: 5vh; /* Reduz o espaçamento em telas menores */
+    }
+    .habilidade p, h1{
+        color: blue;
+
+    }
+    .projetos {
+        flex-direction: column; /* Empilha os projetos verticalmente */
+        align-items: center; /* Centraliza os projetos */
+    }
+
+    .projeto1 {
+        min-width: 90%; /* Ocupa quase toda a largura da tela */
+        margin: 10px 0; /* Espaçamento entre os projetos */
+    }
+
+    .projeto1 img {
+        height: auto; /* Ajusta automaticamente a altura */
+        width: 100%; /* Garante que a imagem use toda a largura */
+    }
+
+    .projeto1 button:hover ~ h1,
+    .projeto1 button:hover ~ p {
+        opacity: 0;
+    }
+
+    .projeto1 h1, .projeto1 p {
+        font-size: 1rem; /* Ajusta o tamanho do texto para caber melhor */
+        opacity: 0; /* Texto escondido por padrão */
+    }
+
+    .projeto1 button {
+        padding: 10px; /* Botão menor */
+        font-size: 0.9rem;
+    }
+}
+
+
+
+.divtext{
+    width: 100%;
+    justify-content: flex-start;
+    padding: 15px;
+    
+}
+
+.projetos{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+
+.projeto1{
+    min-height: 20%;
+    min-width: 32%;
+    margin: 5px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    border: 2ps solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color:blue ;
+    
+}
+.projeto1 button{
+    opacity: 0;
+    padding: 17px;
+    background-color: pink;
+    position: absolute;
+    margin: .5em;
+    border-radius: 10px;
+}
+.projeto1 h1{
+    position: absolute;
+    margin-bottom: 12%;
+    opacity: 0;
+}
+.projeto1 p{
+    position: absolute;
+    opacity: 0;
+    margin-bottom: 8%;
+    font-size: medium;
+    
+}
+.projeto1 a:hover{
+    color: white;
+}
+.projeto1 a{
+    text-decoration: none;
+}
+.projeto1 img{
+    height: 210px;
+    transition: .5s;
+    width: 100%;
+    border-radius: 5px;
+}
+.imgdiv:hover{
+    opacity: 0;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    border: rgba(255, 0, 127, 0.8);  
+}
+.projeto1:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 0, 127, 0.8); /* Certifique-se de usar 'solid' */
+    border-radius: 10px;
+}
+.projeto1:hover button,
+.projeto1:hover h1,
+.projeto1:hover p{
+    opacity: 1;
+    font-size: larger;
+}
+.projeto1:hover p{
+    justify-content: center;
+    font-size: 15px;
+    align-items: center;
+    margin-left: 3%;
+}
+.projeto1 button:hover{
+    border: 2px solid pink;
+    background-color: black;
+    color: #eee;
+    box-shadow: rgba(255, 255, 255, 0.8);
+}
+.projeto1:hover img{
+    opacity: 0;
+}
+
+
+.projeto1 img{
+
+    border: rgba(255, 0, 127, 0.8);
+}
+
+.projeto1 button:hover{ 
+    cursor: pointer;
+
+}

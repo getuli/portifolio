@@ -1,0 +1,78 @@
+
+.oquesei{
+    width: 100%;
+    background-color: #2f2f2f;
+    margin: 0 auto;
+}
+.container_skill{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin: 5px;
+   
+    
+}
+.skills{
+    height: 50%;
+    display:flex ;
+    justify-content: center;
+    align-items: flex-start;
+    width: 28%;
+    flex-direction: column;
+    background: linear-gradient(to bottom right, #ff9aa0, #fe2e3b, #a3060a, #8f030c, #a4000e, #970009);
+    padding: 30px;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.skills h1,h3, p{
+    margin-top: 50px;
+}
+.skills, p, li, h1, h3{
+    color: #eee;
+    
+}
+.skills img{
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 80px;
+    display: flex;
+    align-self: center;
+}
+.skills:hover{
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 0, 127, 0.8); /* Certifique-se de usar 'solid' */
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.skill-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) { /* Media query para telas menores */
+   .skills img{
+    margin-left: 40px;
+   }
+    .oquesei {
+        overflow-x: auto; /* Ativa a rolagem horizontal */
+    }
+
+    .container_skill {
+        flex-wrap: nowrap; /* Itens dispostos horizontalmente */
+        gap: 10px; /* Espaçamento entre as skills */
+        justify-content: flex-start; /* Alinha as skills horizontalmente */
+    }
+
+    .skills {
+        width: 90%; /* Reduz a largura das skills em dispositivos menores */
+        flex: 0 0 auto; /* Garante que os itens não diminuam além do necessário */
+    }
+  }

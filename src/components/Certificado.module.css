@@ -1,0 +1,78 @@
+/* Estilo para a seção principal */
+.section_scroll {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #2F2F2F;
+    height: 60vh;
+    
+}
+.section_scroll h1{
+    justify-self: flex-start;
+    align-self: flex-start;
+    color: rgb(0,234,225);
+    font-size: 35px;
+}
+
+/* Container principal */
+.certificadoContainer {
+    text-align: center;
+}
+
+/* Wrapper para rolagem horizontal */
+.scrollingWrapper {
+    display: flex;
+    overflow-x: auto; /* Permite rolagem horizontal */
+    padding: 10px 0;
+    scroll-behavior: smooth; /* Rolagem suave */
+    gap: 15px; /* Espaçamento entre itens */
+    scrollbar-width: thin; /* Para navegadores Firefox */
+}
+
+/* Barra de rolagem personalizada */
+.scrollingWrapper::-webkit-scrollbar {
+    height: 12px; /* Altura da barra de rolagem */
+}
+
+.scrollingWrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 105, 180, 0.7); /* Cor da parte que desliza */
+    border-radius: 6px; /* Bordas arredondadas */
+}
+
+.scrollingWrapper::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Cor do fundo da barra */
+}
+
+/* Estilo para cada certificado */
+.certificado {
+    flex: 0 0 auto; /* Não encolher e manter tamanho fixo */
+    max-width: 300px;
+    min-width: 250px; /* Tamanho mínimo para dispositivos menores */
+    margin-right: 10px;
+}
+
+/* Estilo para as imagens */
+.certificado img {
+    width: 100%;
+    height: auto; /* Mantém a proporção */
+    border: 3px solid rgba(255, 105, 180, 0.8);
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Animação suave */
+}
+
+/* Zoom ao passar o mouse */
+.certificado img:hover {
+    transform: scale(1.05);
+}
+
+/* Para telas menores */
+@media (max-width: 768px) {
+    .scrollingWrapper {
+        padding: 5px 0; /* Reduz o espaçamento */
+        gap: 10px; /* Reduz a distância entre itens */
+    }
+
+    .certificado {
+        min-width: 200px; /* Ajusta tamanho mínimo para telas pequenas */
+    }
+}

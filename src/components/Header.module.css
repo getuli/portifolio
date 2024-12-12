@@ -1,0 +1,90 @@
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px; /* Adiciona um pouco de padding nas laterais */
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: #460000E8; /* Cor de fundo do header */
+    width: 100%;
+    padding: 20px 4%; /* Ajustado o padding para ficar mais consistente */
+    position: fixed;
+    top: 0; /* Assegura que o header esteja fixo no topo */
+    z-index: 1000; /* Para garantir que o header esteja acima de outros elementos */
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px; /* Usando gap para espaçar os itens */
+}
+
+header a {
+    color: #eee;
+    text-decoration: none;
+}
+
+header img {
+    width: 60px;
+    position: absolute;
+    margin-top: -30px;
+}
+
+.btn_contato button {
+    border: 4px solid red;
+    padding: 10px 20px; /* Ajustado o padding para o botão */
+    background-color: #460000E8;
+    color: #eee;
+    border-radius: 8px;
+    cursor: pointer; /* Para indicar que é um botão clicável */
+}
+
+.btn_contato button:hover {
+    background-color: pink;
+    color: red;
+}
+/* Media Queries para responsividade */
+@media (max-width: 1024px) {
+    #header {
+        padding: 15px 2%; /* Reduzir padding em telas menores */
+    }
+
+    header ul {
+        gap: 20px; /* Reduz espaço entre os itens */
+    }
+
+    .btn_contato button {
+        padding: 8px 15px; /* Ajustar o padding do botão */
+    }
+}
+
+@media (max-width: 768px) {
+    #header {
+        padding: 10px 2%; /* Reduzir padding em telas menores */
+    }
+
+    header ul {
+        flex-direction: column; /* Coloca a lista em coluna em telas pequenas */
+        gap: 10px; /* Espaço reduzido entre os itens */
+        align-items: center; /* Centraliza os itens na coluna */
+    }
+
+    .btn_contato {
+        margin-top: 10px; /* Adiciona espaço entre a nav e o botão de contato */
+    }
+
+    header img {
+        height: 30px; /* Reduz o tamanho do logo */
+    }
+
+    .btn_contato button {
+        padding: 5px 10px; /* Ajusta o padding do botão para telas pequenas */
+    }
+}

@@ -1,0 +1,78 @@
+/* Estilização do rodapé */
+.hr{
+    margin-bottom: 25px;
+}
+footer h1{
+    margin-bottom: 22px;
+}
+footer {
+    padding: 20px;
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+}
+
+/* Container principal do formulário */
+.container_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilização dos inputs e textarea */
+.container_footer input,
+.container_footer textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Mudança de borda ao focar nos inputs */
+.container_footer input:focus,
+.container_footer textarea:focus {
+    border-color: #ff69b4;
+}
+
+/* Botão de envio */
+.container_footer button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff69b4;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.container_footer button:hover {
+    background-color: #ff1493;
+    transform: scale(1.05);
+}
+
+/* Seção de ícones no rodapé */
+.lastfooter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.lastfooter a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lastfooter a:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
